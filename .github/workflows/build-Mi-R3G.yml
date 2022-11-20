@@ -32,6 +32,8 @@ jobs:
       run: |
         cwd=`pwd`
         CONFIG_TOOLCHAIN_DIR=${cwd//\//\\\/}\\/toolchain-mipsel
+        mkdir -p /home/runner/work/rt-n56u/rt-n56u/trunk/user/htop
+        wget https://github.com/htop-dev/htop/archive/refs/tags/3.0.5.tar.gz -P /home/runner/work/rt-n56u/rt-n56u/trunk/user/htop
         cd trunk
         for m in $TNAME;
         do
